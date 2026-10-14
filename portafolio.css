@@ -1,0 +1,1118 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #171717;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   CABECERA
+========================= */
+
+.cabecera {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 35px;
+
+    background: #ff8c8c;
+
+    border-bottom: 1px solid #eeeeee;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   FOTO DE PERFIL
+========================= */
+
+.perfil {
+    position: absolute;
+
+    left: 35px;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.perfil:hover {
+    transform: scale(1.08);
+}
+
+.perfil img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   NOMBRE
+========================= */
+
+.nombre {
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   CONTROLES
+========================= */
+
+.cabecera-controles {
+    position: absolute;
+
+    right: 35px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+/* =========================
+   IDIOMA
+========================= */
+
+.idioma {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.idioma button {
+    border: none;
+
+    background: none;
+
+    padding: 0;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.idioma button:hover {
+    color: #ffffff;
+}
+
+.idioma .idioma-activo {
+    color: #ffffff;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   BOTÓN MENÚ
+========================= */
+
+.menu-boton {
+    width: 28px;
+    height: 22px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.menu-boton span {
+    display: block;
+
+    width: 100%;
+    height: 1.5px;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.menu {
+    position: absolute;
+
+    top: 70px;
+    right: 35px;
+
+    width: 210px;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.menu.abierto {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.menu a {
+    color: #171717;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #ff8c8c;
+}
+
+
+/* =========================
+   ANIMACIÓN MENÚ
+========================= */
+
+.menu-boton.abierto span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-boton.abierto span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-boton.abierto span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+
+/* =========================
+   SOBRE MÍ
+========================= */
+
+.sobre-mi {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 120px 30px 100px;
+}
+
+.sobre-mi-contenido {
+    width: min(850px, 100%);
+
+    text-align: center;
+}
+
+.etiqueta {
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
+    color: #ff8c8c;
+}
+
+.sobre-mi h1 {
+    font-size: clamp(50px, 8vw, 100px);
+
+    line-height: 0.95;
+
+    font-weight: 700;
+
+    margin-bottom: 40px;
+}
+
+.sobre-mi h1 span:last-child {
+    color: #ff8c8c;
+}
+
+.sobre-mi-texto {
+    max-width: 680px;
+
+    margin: 0 auto 15px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #666;
+}
+
+/* =========================
+   BOTÓN CV
+========================= */
+
+.cv-boton {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    padding: 14px 22px;
+
+    background: #ff8c8c;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    border: 1px solid #ff8c8c;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.cv-boton:hover {
+    background: #ffffff;
+
+    color: #ff8c8c;
+
+    transform: translateY(-3px);
+}
+
+.cv-boton span:last-child {
+    font-size: 16px;
+
+    transition: transform 0.3s ease;
+}
+
+.cv-boton:hover span:last-child {
+    transform: translateY(3px);
+}
+
+/* =========================
+   EXPERIENCIA
+========================= */
+
+.experiencia {
+    width: 100%;
+
+    padding: 130px 0 150px;
+
+    overflow: hidden;
+}
+
+.experiencia-contenido {
+    width: min(1200px, calc(100% - 60px));
+
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+.experiencia h2 {
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: 0.9;
+
+    margin-bottom: 25px;
+}
+
+.experiencia-intro {
+    color: #777;
+
+    font-size: 17px;
+
+    margin-bottom: 70px;
+
+    max-width: 650px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TECNOLOGÍAS
+========================= */
+
+.tecnologias {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-top: 1px solid #ff8c8c;
+
+    border-bottom: 1px solid #ff8c8c;
+
+    padding: 22px 0;
+
+    background: #fff;
+
+    margin-bottom: 80px;
+}
+
+.linea-tecnologias {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.tecnologias-track {
+    display: flex;
+
+    align-items: center;
+
+    width: max-content;
+
+    animation: moverTecnologias 30s linear infinite;
+}
+
+.tecnologias-track span {
+    flex-shrink: 0;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    padding: 0 35px;
+
+    color: #333;
+}
+
+.tecnologias-track span::after {
+    content: "✦";
+
+    margin-left: 70px;
+
+    color: #ff8c8c;
+}
+
+@keyframes moverTecnologias {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================
+   CARRUSEL
+========================= */
+
+.experiencia-carrusel {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.experiencia-viewport {
+    width: min(900px, calc(100% - 140px));
+
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+.experiencia-track {
+    display: flex;
+
+    width: 100%;
+
+    transition: transform 0.7s ease;
+}
+
+
+/* =========================
+   TARJETA EXPERIENCIA
+========================= */
+
+.experiencia-card {
+    flex: 0 0 100%;
+
+    min-height: 430px;
+
+    border: 1px solid #e7e7e7;
+
+    background: #ffffff;
+
+    padding: 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+/* =========================
+   CABECERA TARJETA
+========================= */
+
+.experiencia-card-cabecera {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.experiencia-tipo {
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #ff8c8c;
+
+    margin-bottom: 12px;
+}
+
+.experiencia-card h3 {
+    font-size: 48px;
+
+    line-height: 1;
+
+    margin: 0;
+}
+
+.experiencia-fecha {
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    color: #777;
+
+    white-space: nowrap;
+
+    padding-top: 5px;
+}
+
+
+/* =========================
+   CONTENIDO TARJETA
+========================= */
+
+.experiencia-card-contenido {
+    padding: 30px 0;
+}
+
+.experiencia-card-contenido p {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+    max-width: 720px;
+}
+
+
+/* =========================
+   TAGS
+========================= */
+
+.experiencia-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.experiencia-tags span {
+    border: 1px solid #ddd;
+
+    padding: 7px 11px;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: #555;
+}
+
+
+/* =========================
+   FLECHAS
+========================= */
+
+.carrusel-flecha {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #ddd;
+
+    background: #ffffff;
+
+    color: #171717;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.carrusel-flecha:hover {
+    color: #ffffff;
+
+    background: #ff8c8c;
+
+    border-color: #ff8c8c;
+}
+
+.carrusel-flecha.izquierda {
+    margin-left: 25px;
+}
+
+.carrusel-flecha.derecha {
+    margin-right: 25px;
+}
+
+
+/* =========================
+   INDICADORES
+========================= */
+
+.carrusel-indicadores {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.indicador {
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ddd;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.indicador:hover {
+    background: #ffb0b0;
+}
+
+.indicador.activo {
+    background: #ff8c8c;
+
+    transform: scale(1.3);
+}
+
+
+/* =========================
+   PROYECTOS
+========================= */
+
+.proyectos {
+    min-height: 100vh;
+
+    padding: 130px 30px 150px;
+}
+
+.proyectos-contenido {
+    width: min(1200px, 100%);
+
+    margin: 0 auto;
+}
+
+.proyectos h2 {
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: 0.9;
+
+    margin-bottom: 25px;
+}
+
+.proyectos-intro {
+    color: #777;
+
+    font-size: 17px;
+
+    margin-bottom: 70px;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.proyectos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+}
+
+
+/* =========================
+   TARJETAS PROYECTOS
+========================= */
+
+.proyecto {
+    border: 1px solid #e7e7e7;
+
+    background: #fff;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+
+    overflow: hidden;
+}
+
+.proyecto:hover {
+    transform: translateY(-8px);
+
+    border-color: #ff8c8c;
+}
+
+
+/* =========================
+   IMAGEN
+========================= */
+
+.proyecto-imagen {
+    height: 280px;
+
+    background: #f8f8f8;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+.proyecto-logo {
+    width: 480px;
+    height: 480px;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.proyecto:hover .proyecto-logo {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.proyecto-info {
+    padding: 30px;
+}
+
+.proyecto-tipo {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #ff8c8c;
+
+    margin-bottom: 12px;
+}
+
+.proyecto h3 {
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.proyecto-info > p:not(.proyecto-tipo) {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   TECNOLOGÍAS PROYECTO
+========================= */
+
+.proyecto-tecnologias {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+.proyecto-tecnologias span {
+    border: 1px solid #ddd;
+
+    padding: 6px 10px;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: #555;
+}
+
+
+/* =========================
+   ENLACE
+========================= */
+
+.proyecto-link {
+    color: #171717;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition: color 0.2s ease;
+}
+
+.proyecto-link:hover {
+    color: #ff8c8c;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .cabecera {
+        height: 65px;
+
+        padding: 0 20px;
+    }
+
+    .perfil {
+        left: 20px;
+
+        width: 38px;
+        height: 38px;
+    }
+
+    .cabecera-controles {
+        right: 20px;
+
+        gap: 18px;
+    }
+
+    .menu {
+        top: 65px;
+
+        right: 20px;
+    }
+
+
+    .sobre-mi {
+        min-height: 90vh;
+    }
+
+    .sobre-mi h1 {
+        font-size: 60px;
+    }
+
+
+    .experiencia {
+        padding-top: 100px;
+    }
+
+    .experiencia-contenido {
+        width: calc(100% - 40px);
+    }
+
+    .experiencia h2 {
+        font-size: 60px;
+    }
+
+    .experiencia-card {
+        padding: 30px;
+
+        min-height: 450px;
+    }
+
+    .experiencia-card h3 {
+        font-size: 38px;
+    }
+
+    .experiencia-card-cabecera {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .experiencia-fecha {
+        padding-top: 0;
+    }
+
+    .experiencia-viewport {
+        width: calc(100% - 120px);
+    }
+
+    .carrusel-flecha.izquierda {
+        margin-left: 15px;
+    }
+
+    .carrusel-flecha.derecha {
+        margin-right: 15px;
+    }
+
+
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto-imagen {
+        height: 230px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .nombre {
+        font-size: 13px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .idioma {
+        gap: 5px;
+    }
+
+
+    .sobre-mi {
+        padding: 100px 20px 80px;
+    }
+
+    .sobre-mi h1 {
+        font-size: 48px;
+    }
+
+    .sobre-mi-texto {
+        font-size: 15px;
+    }
+
+
+    .experiencia {
+        padding-bottom: 100px;
+    }
+
+    .experiencia-contenido {
+        width: calc(100% - 40px);
+    }
+
+    .experiencia h2 {
+        font-size: 50px;
+    }
+
+    .experiencia-intro {
+        font-size: 15px;
+    }
+
+    .tecnologias {
+        margin-bottom: 50px;
+    }
+
+    .experiencia-carrusel {
+        gap: 10px;
+    }
+
+    .experiencia-viewport {
+        width: calc(100% - 80px);
+    }
+
+    .experiencia-card {
+        padding: 25px;
+
+        min-height: 500px;
+    }
+
+    .experiencia-card h3 {
+        font-size: 34px;
+    }
+
+    .experiencia-card-contenido p {
+        font-size: 14px;
+    }
+
+    .carrusel-flecha {
+        width: 35px;
+        height: 35px;
+
+        font-size: 15px;
+    }
+
+    .carrusel-flecha.izquierda {
+        margin-left: 5px;
+    }
+
+    .carrusel-flecha.derecha {
+        margin-right: 5px;
+    }
+
+
+    .proyectos {
+        padding: 90px 20px;
+    }
+
+    .proyectos h2 {
+        font-size: 55px;
+    }
+
+}

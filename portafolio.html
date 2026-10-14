@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio | Sai El Yagh</title>
+
+    <link rel="stylesheet" href="portafolio.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         CABECERA
+    ========================== -->
+
+    <header class="cabecera">
+
+        <a href="#sobre-mi" class="perfil">
+            <img src="OnePiece.png" alt="Sai El Yagh">
+        </a>
+
+        <div class="nombre">
+            Sai El Yagh
+        </div>
+
+        <div class="cabecera-controles">
+
+            <div class="idioma">
+
+                <button id="es-btn" class="idioma-activo">
+                    ES
+                </button>
+
+                <span>|</span>
+
+                <button id="en-btn">
+                    EN
+                </button>
+
+            </div>
+
+            <button
+                class="menu-boton"
+                id="menu-boton"
+                aria-label="Abrir menú"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <!-- MENÚ -->
+
+        <nav class="menu" id="menu">
+
+            <a
+                href="#sobre-mi"
+                data-es="Sobre mí"
+                data-en="About me"
+            >
+                Sobre mí
+            </a>
+
+            <a
+                href="#experiencia"
+                data-es="Experiencia"
+                data-en="Experience"
+            >
+                Experiencia
+            </a>
+
+            <a
+                href="#proyectos"
+                data-es="Proyectos"
+                data-en="Projects"
+            >
+                Proyectos
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         SOBRE MÍ
+    ========================== -->
+
+    <section class="sobre-mi" id="sobre-mi">
+
+        <div class="sobre-mi-contenido">
+
+            <p
+                class="etiqueta"
+                data-es="SOBRE MÍ"
+                data-en="ABOUT ME"
+            >
+                SOBRE MÍ
+            </p>
+
+            <h1>
+
+                <span
+                    data-es="Hola, soy"
+                    data-en="Hi, I'm"
+                >
+                    Hola, soy
+                </span>
+
+                <span>Sai</span>
+
+            </h1>
+
+            <p
+                class="sobre-mi-texto"
+                data-es="Desarrolladora de aplicaciones y apasionada por la tecnología. Me gusta crear proyectos que combinen funcionalidad, diseño y una buena experiencia de usuario."
+                data-en="Application developer and technology enthusiast. I enjoy creating projects that combine functionality, design and a great user experience."
+            >
+                Desarrolladora de aplicaciones y apasionada por la tecnología.
+                Me gusta crear proyectos que combinen funcionalidad,
+                diseño y una buena experiencia de usuario.
+            </p>
+
+            <p
+                class="sobre-mi-texto"
+                data-es="Actualmente estoy ampliando mis conocimientos en desarrollo Full Stack, arquitecturas Cloud y nuevas tecnologías."
+                data-en="I am currently expanding my knowledge in Full Stack development, Cloud architectures and new technologies."
+            >
+                Actualmente estoy ampliando mis conocimientos en desarrollo
+                Full Stack, arquitecturas Cloud y nuevas tecnologías.
+            </p>
+
+            <a
+                href="CV.pdf"
+                download="CV-Sai-El-Yagh.pdf"
+                class="cv-boton"
+            >
+                <span data-es="Descargar CV" data-en="Download CV">
+                    Descargar CV
+                </span>
+                <span>↓</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCIA
+    ========================== -->
+
+    <section
+        class="experiencia"
+        id="experiencia"
+    >
+
+        <div class="experiencia-contenido">
+
+            <p
+                class="etiqueta"
+                data-es="EXPERIENCIA"
+                data-en="EXPERIENCE"
+            >
+                EXPERIENCIA
+            </p>
+
+            <h2
+                data-es="Mi recorrido"
+                data-en="My journey"
+            >
+                Mi recorrido
+            </h2>
+
+            <p
+                class="experiencia-intro"
+                data-es="Una pequeña parte de lo que he estudiado, aprendido y construido a lo largo del camino."
+                data-en="A small part of what I have studied, learned and built along the way."
+            >
+                Una pequeña parte de lo que he estudiado, aprendido
+                y construido a lo largo del camino.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             LÍNEA DE TECNOLOGÍAS
+        ========================== -->
+
+        <div class="tecnologias">
+
+            <div class="linea-tecnologias">
+
+                <div class="tecnologias-track">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>React</span>
+                    <span>Firebase</span>
+                    <span>SQL</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Vue</span>
+                    <span>Quasar</span>
+
+                    <!-- REPETICIÓN -->
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>React</span>
+                    <span>Firebase</span>
+                    <span>SQL</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Vue</span>
+                    <span>Quasar</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             CARRUSEL
+        ========================== -->
+
+        <div class="experiencia-carrusel">
+
+            <button
+                class="carrusel-flecha izquierda"
+                id="anterior"
+                aria-label="Experiencia anterior"
+            >
+                ←
+            </button>
+
+
+            <div class="experiencia-viewport">
+
+                <div
+                    class="experiencia-track"
+                    id="experiencia-track"
+                >
+
+
+                    <!-- =========================
+                         DAM
+                    ========================== -->
+
+                    <article class="experiencia-card">
+
+                        <div class="experiencia-card-cabecera">
+
+                            <div>
+
+                                <p class="experiencia-tipo">
+                                    Formación
+                                </p>
+
+                                <h3>DAM</h3>
+
+                            </div>
+
+                            <span class="experiencia-fecha">
+                                2024 — 2026
+                            </span>
+
+                        </div>
+
+
+                        <div class="experiencia-card-contenido">
+
+                            <p
+                                data-es="Desarrollo de Aplicaciones Multiplataforma, donde adquirí las bases para desarrollar aplicaciones y trabajar con diferentes tecnologías."
+                                data-en="Cross-platform Application Development, where I built the foundations for developing applications and working with different technologies."
+                            >
+                                Desarrollo de Aplicaciones Multiplataforma,
+                                donde adquirí las bases para desarrollar
+                                aplicaciones y trabajar con diferentes tecnologías.
+                            </p>
+
+                            <p
+                                data-es="Durante el ciclo trabajé especialmente con desarrollo Android, Java, bases de datos, Firebase y desarrollo de proyectos completos."
+                                data-en="During the degree I worked especially with Android development, Java, databases, Firebase and complete projects."
+                            >
+                                Durante el ciclo trabajé especialmente con
+                                desarrollo Android, Java, bases de datos,
+                                Firebase y desarrollo de proyectos completos.
+                            </p>
+
+                        </div>
+
+
+                        <div class="experiencia-tags">
+
+                            <span>Java</span>
+                            <span>Kotlin</span>
+                            <span>Android</span>
+                            <span>Firebase</span>
+                            <span>SQL</span>
+                            <span>Git</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         INECO
+                    ========================== -->
+
+                    <article class="experiencia-card">
+
+                        <div class="experiencia-card-cabecera">
+
+                            <div>
+
+                                <p class="experiencia-tipo">
+                                    Prácticas
+                                </p>
+
+                                <h3>INECO</h3>
+
+                            </div>
+
+                            <span class="experiencia-fecha">
+                                4 meses
+                            </span>
+
+                        </div>
+
+
+                        <div class="experiencia-card-contenido">
+
+                            <p
+                                data-es="Experiencia en el área de Justicia y Administración Judicial Electrónica, trabajando dentro de un entorno profesional de desarrollo."
+                                data-en="Experience in Justice and Electronic Judicial Administration, working in a professional software development environment."
+                            >
+                                Experiencia en el área de Justicia y
+                                Administración Judicial Electrónica,
+                                trabajando dentro de un entorno profesional
+                                de desarrollo.
+                            </p>
+
+                            <p
+                                data-es="Trabajé con microservicios, desarrollo backend y frontend, bases de datos y control de versiones."
+                                data-en="I worked with microservices, backend and frontend development, databases and version control."
+                            >
+                                Trabajé con microservicios, desarrollo
+                                backend y frontend, bases de datos
+                                y control de versiones.
+                            </p>
+
+                        </div>
+
+
+                        <div class="experiencia-tags">
+
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>Vue</span>
+                            <span>Quasar</span>
+                            <span>SQL</span>
+                            <span>GitLab</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         VELVET
+                    ========================== -->
+
+                    <article class="experiencia-card">
+
+                        <div class="experiencia-card-cabecera">
+
+                            <div>
+
+                                <p class="experiencia-tipo">
+                                    Experiencia profesional
+                                </p>
+
+                                <h3>Velvet</h3>
+
+                            </div>
+
+                            <span class="experiencia-fecha">
+                                6 meses
+                            </span>
+
+                        </div>
+
+
+                        <div class="experiencia-card-contenido">
+
+                            <p
+                                data-es="Experiencia profesional desarrollada durante seis meses, centrada en la atención y gestión de clientes."
+                                data-en="Six months of professional experience focused on customer service and client management."
+                            >
+                                Experiencia profesional desarrollada durante
+                                seis meses, centrada en la atención y gestión
+                                de clientes.
+                            </p>
+
+                            <p
+                                data-es="Gestioné llamadas telefónicas, programación y modificación de citas, resolución de consultas, registro de información y seguimiento de solicitudes, manteniendo una comunicación profesional y una atención personalizada."
+                                data-en="I handled phone calls, appointment scheduling and changes, customer enquiries, information management and request follow-up, maintaining professional communication and personalised customer service."
+                            >
+                                Gestioné llamadas telefónicas, programación
+                                y modificación de citas, resolución de consultas,
+                                registro de información y seguimiento de
+                                solicitudes, manteniendo una comunicación
+                                profesional y una atención personalizada.
+                            </p>
+
+                        </div>
+
+
+                        <div class="experiencia-tags">
+
+                            <span>Atención al cliente</span>
+                            <span>Gestión de citas</span>
+                            <span>Comunicación</span>
+                            <span>Gestión de información</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =========================
+                         TAJAMAR
+                    ========================== -->
+
+                    <article class="experiencia-card">
+
+                        <div class="experiencia-card-cabecera">
+
+                            <div>
+
+                                <p class="experiencia-tipo">
+                                    Formación · Actualidad
+                                </p>
+
+                                <h3>Tajamar</h3>
+
+                            </div>
+
+                            <span class="experiencia-fecha">
+                                2026 — Actualidad
+                            </span>
+
+                        </div>
+
+
+                        <div class="experiencia-card-contenido">
+
+                            <p
+                                data-es="Actualmente estoy cursando el Máster en Desarrollo Full Stack y Arquitecturas Cloud."
+                                data-en="I am currently studying a Master's degree in Full Stack Development and Cloud Architectures."
+                            >
+                                Actualmente estoy cursando el Máster
+                                en Desarrollo Full Stack y Arquitecturas Cloud.
+                            </p>
+
+                            <p
+                                data-es="Estoy ampliando mis conocimientos en desarrollo web, arquitecturas, Cloud y nuevas tecnologías."
+                                data-en="I am expanding my knowledge in web development, architectures, Cloud and new technologies."
+                            >
+                                Estoy ampliando mis conocimientos en
+                                desarrollo web, arquitecturas, Cloud
+                                y nuevas tecnologías.
+                            </p>
+
+                        </div>
+
+
+                        <div class="experiencia-tags">
+
+                            <span>React</span>
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>Cloud</span>
+                            <span>Git</span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="carrusel-flecha derecha"
+                id="siguiente"
+                aria-label="Siguiente experiencia"
+            >
+                →
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             INDICADORES
+        ========================== -->
+
+        <div
+            class="carrusel-indicadores"
+            id="indicadores"
+        >
+
+            <button
+                class="indicador activo"
+                data-index="0"
+                aria-label="DAM"
+            ></button>
+
+            <button
+                class="indicador"
+                data-index="1"
+                aria-label="INECO"
+            ></button>
+
+            <button
+                class="indicador"
+                data-index="2"
+                aria-label="Velvet"
+            ></button>
+
+            <button
+                class="indicador"
+                data-index="3"
+                aria-label="Tajamar"
+            ></button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROYECTOS
+    ========================== -->
+
+    <section
+        class="proyectos"
+        id="proyectos"
+    >
+
+        <div class="proyectos-contenido">
+
+            <p
+                class="etiqueta"
+                data-es="PORTFOLIO"
+                data-en="PORTFOLIO"
+            >
+                PORTFOLIO
+            </p>
+
+            <h2
+                data-es="Proyectos"
+                data-en="Projects"
+            >
+                Proyectos
+            </h2>
+
+            <p
+                class="proyectos-intro"
+                data-es="Algunos de los proyectos en los que he trabajado."
+                data-en="Some of the projects I have worked on."
+            >
+                Algunos de los proyectos en los que he trabajado.
+            </p>
+
+
+            <div class="proyectos-grid">
+
+
+                <!-- PROYECTO 1 -->
+
+                <article class="proyecto">
+
+                    <div class="proyecto-imagen">
+
+                        <img
+                            src="PetFect.png"
+                            alt="Logo de PetFect"
+                            class="proyecto-logo"
+                        >
+
+                    </div>
+
+                    <div class="proyecto-info">
+
+                        <p class="proyecto-tipo">
+                            Android · Java · Firebase
+                        </p>
+
+                        <h3>PetFect</h3>
+
+                        <p
+                            data-es="Aplicación móvil para la gestión y adopción de mascotas, desarrollada como proyecto final de ciclo."
+                            data-en="Mobile application for pet management and adoption, developed as my final degree project."
+                        >
+                            Aplicación móvil para la gestión y adopción
+                            de mascotas, desarrollada como proyecto final
+                            de ciclo.
+                        </p>
+
+                        <div class="proyecto-tecnologias">
+
+                            <span>Java</span>
+                            <span>Firebase</span>
+                            <span>Supabase</span>
+                            <span>Glide</span>
+
+                        </div>
+
+                        <a
+                            href="https://github.com/Sayelyag/PetFect/tree/master"
+                            class="proyecto-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-es="Ver proyecto →"
+                            data-en="View project →"
+                        >
+                            Ver proyecto →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROYECTO 2 -->
+
+                <article class="proyecto">
+
+                    <div class="proyecto-imagen">
+                        <span>02</span>
+                    </div>
+
+                    <div class="proyecto-info">
+
+                        <p class="proyecto-tipo">
+                            Web · JavaScript
+                        </p>
+
+                        <h3>Velvet</h3>
+
+                        <p
+                            data-es="Web desarrollada para Velvet, empresa especializada en la limpieza de coches de lujo a domicilio, con diseño responsive, contenido interactivo, JavaScript y carruseles visuales."
+                            data-en="Website developed for Velvet, a company specializing in luxury car cleaning at home, featuring responsive design, interactive content, JavaScript and visual carousels."
+                        >
+                            Web desarrollada para Velvet, empresa especializada en la limpieza
+                            de coches de lujo a domicilio, con diseño responsive, contenido
+                            interactivo, JavaScript y carruseles visuales.
+                        </p>
+
+                        <div class="proyecto-tecnologias">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a
+                            href="#"
+                            class="proyecto-link"
+                            data-es="Ver proyecto →"
+                            data-en="View project →"
+                        >
+                            Ver proyecto →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROYECTO 3 -->
+
+                <article class="proyecto">
+
+                    <div class="proyecto-imagen">
+                        <span>03</span>
+                    </div>
+
+                    <div class="proyecto-info">
+
+                        <p class="proyecto-tipo">
+                            Python · OpenCV
+                        </p>
+
+                        <h3>GestureControl</h3>
+
+                        <p
+                            data-es="Proyecto experimental para controlar diferentes acciones del ordenador mediante gestos de la mano."
+                            data-en="Experimental project to control different computer actions using hand gestures."
+                        >
+                            Proyecto experimental para controlar
+                            diferentes acciones del ordenador mediante
+                            gestos de la mano.
+                        </p>
+
+                        <div class="proyecto-tecnologias">
+
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>MediaPipe</span>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            class="proyecto-link"
+                            data-es="Ver proyecto →"
+                            data-en="View project →"
+                        >
+                            Ver proyecto →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <script src="portafolio.js"></script>
+</body>
+</html>
